@@ -6,6 +6,7 @@ async function getData(){
     const endpoint = `${domain}/api/posts` // -> third party api request??
     const res = await fetch(endpoint, {next: {revalidate: 10}} ) //HTTP GET Method
 
+    
     if (!res.ok) {
         throw new Error("Failed to fetch data")
     }
